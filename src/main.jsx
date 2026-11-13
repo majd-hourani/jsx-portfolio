@@ -33,6 +33,19 @@ function App() {
     },
   ];
 
+  const currentHour = 18;
+  let greeting;
+
+  if (currentHour < 12) {
+    greeting = "Good Morning";
+  } else if (currentHour < 17) {
+    greeting = "Good Afternoon";
+  } else {
+    greeting = "Good Evening";
+  }
+
+  console.log(currentHour);
+
   return (
     <div>
       <header>
@@ -52,7 +65,9 @@ function App() {
 
       <main>
         <section id="home">
-          <h2>Hello, I'm {firstName}!</h2>
+          <h2>
+            {greeting}, I'm {firstName}!
+          </h2>
           <p>{introduction}</p>
           <a href="#projects">View My Projects</a>
         </section>
